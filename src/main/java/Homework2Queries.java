@@ -32,7 +32,7 @@ public class Homework2Queries {
         InfModel owlSchema = ModelFactory.createInfModel(reasoner, schema);
 //        owlSchema.write(System.out, "TTL");
         query1(owlSchema);
-
+        query2(owlSchema);
     }
 
     private String getFilePath() {
@@ -50,13 +50,29 @@ public class Homework2Queries {
         QueryExecution queryExecution = QueryExecutionFactory.create(query, owlSchema);
         try {
             ResultSet resultSet = queryExecution.execSelect();
-            System.out.println("Who are the students that can help with C Programming Language?");
+            System.out.println("Who are the students that can help with C Programming Language?\n");
             printResultSet(Arrays.asList("?name"), resultSet);
         } finally {
             queryExecution.close();
         }
     }
 
+    private static void query2(InfModel owlSchema) {
+        String queryString = PREFIX +
+                            "SELECT ?name WHERE {" +
+                            "?prof a univ:Professor ;" +
+                            "vcard:title 'Doctor';" +
+                            "foaf:name ?name}";
+        Query query = QueryFactory.create(queryString);
+        QueryExecution queryExecution = QueryExecutionFactory.create(query, owlSchema);
+        try {
+            ResultSet resultSet = queryExecution.execSelect();
+            System.out.println("Who are the professors who have the title of 'Doctor'?\n");
+            printResultSet(Arrays.asList("?name"), resultSet);
+        } finally {
+            queryExecution.close();
+        }
+    }
     /**
      *
      * @param questionWords - question words from the select clause
@@ -72,5 +88,6 @@ public class Homework2Queries {
             rdfNodes.forEach(rdfNode -> System.out.println(rdfNode.toString()));
             rdfNodes.clear();
         }
+        System.out.println();
     }
 }
