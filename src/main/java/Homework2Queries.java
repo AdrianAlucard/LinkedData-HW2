@@ -33,6 +33,7 @@ public class Homework2Queries {
         query1(owlSchema);
         query2(owlSchema);
         query3(owlSchema);
+        query4(owlSchema);
     }
 
     private String getFilePath() {
@@ -71,6 +72,17 @@ public class Homework2Queries {
         selectQuery(getQueryExecution(owlSchema, queryString),
                 "What classes are offered and which days (if known) are they available?\n",
                     Arrays.asList("?title", "?days"));
+    }
+
+    private static void query4(InfModel owlSchema) {
+        String queryString = PREFIX +
+                            "SELECT ?name ?staffId WHERE {" +
+                            "?student a univ:Student ;" +
+                            "foaf:name ?name ;" +
+                            "univ:staffId ?staffId ; }";
+        selectQuery(getQueryExecution(owlSchema, queryString),
+                    "What are the names of the lab assistants and what are their univ ids?\n",
+                    Arrays.asList("?name", "?staffId"));
     }
 
     /**
