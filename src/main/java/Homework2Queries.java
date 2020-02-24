@@ -30,18 +30,18 @@ public class Homework2Queries {
         reasoner = reasoner.bindSchema(schema);
         InfModel owlSchema = ModelFactory.createInfModel(reasoner, schema);
 //        owlSchema.write(System.out, "TTL");
-        query1(owlSchema);
-        query2(owlSchema);
-        query3(owlSchema);
-        query4(owlSchema);
-        query5(owlSchema);
+        selectQuery1(owlSchema);
+        selectQuery2(owlSchema);
+        selectQuery3(owlSchema);
+        selectQuery4(owlSchema);
+        selectQuery5(owlSchema);
     }
 
     private String getFilePath() {
         return this.getClass().getResource("hw2.ttl").getFile();
     }
 
-    private static void query1(InfModel owlSchema) {
+    private static void selectQuery1(InfModel owlSchema) {
         String queryString = PREFIX +
                             "SELECT ?name WHERE {" +
                             "?student a univ:Student ;" +
@@ -53,7 +53,7 @@ public class Homework2Queries {
                     Arrays.asList("?name"));
     }
 
-    private static void query2(InfModel owlSchema) {
+    private static void selectQuery2(InfModel owlSchema) {
         String queryString = PREFIX +
                             "SELECT ?name WHERE {" +
                             "?prof a univ:Professor ;" +
@@ -64,7 +64,7 @@ public class Homework2Queries {
                     Arrays.asList("?name"));
     }
 
-    private static void query3(InfModel owlSchema) {
+    private static void selectQuery3(InfModel owlSchema) {
         String queryString = PREFIX +
                                 "SELECT ?title ?days WHERE {" +
                                 "?course a univ:Course ;" +
@@ -75,7 +75,7 @@ public class Homework2Queries {
                     Arrays.asList("?title", "?days"));
     }
 
-    private static void query4(InfModel owlSchema) {
+    private static void selectQuery4(InfModel owlSchema) {
         String queryString = PREFIX +
                             "SELECT ?name ?staffId WHERE {" +
                             "?student a univ:Student ;" +
@@ -86,7 +86,7 @@ public class Homework2Queries {
                     Arrays.asList("?name", "?staffId"));
     }
 
-    private static void query5(InfModel owlSchema) {
+    private static void selectQuery5(InfModel owlSchema) {
         String queryString = PREFIX +
                             "SELECT ?name ?email ?phone WHERE {" +
                             "?prof a univ:Professor ;" +
