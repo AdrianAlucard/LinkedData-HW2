@@ -33,6 +33,7 @@ public class Homework2Queries {
 //        owlSchema.write(System.out, "TTL");
         query1(owlSchema);
         query2(owlSchema);
+        query3(owlSchema);
     }
 
     private String getFilePath() {
@@ -73,6 +74,25 @@ public class Homework2Queries {
             queryExecution.close();
         }
     }
+
+    private static void query3(InfModel owlSchema) {
+        String queryString = PREFIX +
+                                "SELECT ?title ?days WHERE {" +
+                                "?course a univ:Course ;" +
+                                "ex:name ?title ." +
+                                "OPTIONAL {?course ex:days ?days}}";
+        Query query = QueryFactory.create(queryString);
+        QueryExecution queryExecution = QueryExecutionFactory.create(query, owlSchema);
+        try {
+            ResultSet resultSet = queryExecution.execSelect();
+            System.out.println("What classes are offered and which days (if known) are they available?\n");
+            printResultSet(Arrays.asList("?title", "?days"), resultSet);
+        } finally {
+            queryExecution.close();
+        }
+    }
+
+
     /**
      *
      * @param questionWords - question words from the select clause
@@ -85,7 +105,8 @@ public class Homework2Queries {
             for(String word: questionWords) {
                 rdfNodes.add(soln.get(word));
             }
-            rdfNodes.forEach(rdfNode -> System.out.println(rdfNode.toString()));
+            rdfNodes.forEach(rdfNode -> System.out.print(rdfNode != null ? rdfNode.toString() + " " : ""));
+            System.out.println();
             rdfNodes.clear();
         }
         System.out.println();
