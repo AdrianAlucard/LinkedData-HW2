@@ -17,7 +17,6 @@ public class Homework2Queries {
             "PREFIX univ: <http://www.cs.ccsu.edu/~neli/university.owl#>" +
             "PREFIX vcard: <http://www.w3.org/vcard/ns#>" +
             "PREFIX ex: <http://example.org/>";
-
     public static void main(String[] args) {
         Homework2Queries homework2Queries = new Homework2Queries();
         Model schema = ModelFactory.createOntologyModel();
@@ -47,15 +46,9 @@ public class Homework2Queries {
                             "univ:helpsWith [a univ:Course ;" +
                             "ex:name 'C Programming Language'];" +
                             " foaf:name ?name}";
-        Query query = QueryFactory.create(queryString);
-        QueryExecution queryExecution = QueryExecutionFactory.create(query, owlSchema);
-        try {
-            ResultSet resultSet = queryExecution.execSelect();
-            System.out.println("Who are the students that can help with C Programming Language?\n");
-            printResultSet(Arrays.asList("?name"), resultSet);
-        } finally {
-            queryExecution.close();
-        }
+        selectQuery(getQueryExecution(owlSchema, queryString),
+                    "Who are the students that can help with C Programming Language?\n",
+                    Arrays.asList("?name"));
     }
 
     private static void query2(InfModel owlSchema) {
@@ -64,15 +57,9 @@ public class Homework2Queries {
                             "?prof a univ:Professor ;" +
                             "vcard:title 'Doctor';" +
                             "foaf:name ?name}";
-        Query query = QueryFactory.create(queryString);
-        QueryExecution queryExecution = QueryExecutionFactory.create(query, owlSchema);
-        try {
-            ResultSet resultSet = queryExecution.execSelect();
-            System.out.println("Who are the professors who have the title of 'Doctor'?\n");
-            printResultSet(Arrays.asList("?name"), resultSet);
-        } finally {
-            queryExecution.close();
-        }
+        selectQuery(getQueryExecution(owlSchema, queryString) ,
+                    "Who are the professors who have the title of 'Doctor'?\n",
+                    Arrays.asList("?name"));
     }
 
     private static void query3(InfModel owlSchema) {
@@ -81,17 +68,36 @@ public class Homework2Queries {
                                 "?course a univ:Course ;" +
                                 "ex:name ?title ." +
                                 "OPTIONAL {?course ex:days ?days}}";
-        Query query = QueryFactory.create(queryString);
-        QueryExecution queryExecution = QueryExecutionFactory.create(query, owlSchema);
+        selectQuery(getQueryExecution(owlSchema, queryString),
+                "What classes are offered and which days (if known) are they available?\n",
+                    Arrays.asList("?title", "?days"));
+    }
+
+    /**
+     * Method will execute a select query and print out the resultSet
+     * @param queryExecution - object used to execute the select query
+     * @param question - question to print to console
+     * @param questionWords - params in the select query to be printed out
+     */
+    private static void selectQuery(QueryExecution queryExecution, String question, List<String> questionWords) {
         try {
             ResultSet resultSet = queryExecution.execSelect();
-            System.out.println("What classes are offered and which days (if known) are they available?\n");
-            printResultSet(Arrays.asList("?title", "?days"), resultSet);
+            System.out.println(question);
+            printResultSet(questionWords, resultSet);
         } finally {
             queryExecution.close();
         }
     }
 
+    /**
+     *
+     * @param owlSchema
+     * @param queryString
+     * @return returns the QueryExecution to be used
+     */
+    private static QueryExecution getQueryExecution(InfModel owlSchema, String queryString) {
+        return QueryExecutionFactory.create(QueryFactory.create(queryString), owlSchema);
+    }
 
     /**
      *
