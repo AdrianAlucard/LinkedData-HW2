@@ -15,7 +15,7 @@ _:bn0 rdf:type foaf:person, univ:Professor;
 _:bn1 rdf:type foaf:person, univ:Professor;
     foaf:name 'Chad Williams';
     vcard:title 'Doctor';
-    univ:title 'Professor', 'Derparment Chair';
+    univ:title 'Professor', 'Department Chair';
     univ:e-mail 'cwilliams@ccsu.edu';
     foaf:phone '860-832-2719';
     foaf:knows _:bn0, _:bn2 , _:bn3, _:bn4, _:bn5, _:bn6, _:bn7, _:bn8;
