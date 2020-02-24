@@ -1,0 +1,170 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix univ: <http://www.cs.ccsu.edu/~neli/university.owl#> .
+@prefix vcard: <http://www.w3.org/vcard/ns#> .
+@prefix ex: <http://example.org/> .
+
+_:bn0 rdf:type foaf:person, univ:Professor;
+    foaf:name 'Neli Zlatareva';
+    vcard:title 'Doctor';
+    univ:title 'Professor';
+    univ:e-mail 'Zlatareva@ccsu.edu';
+    foaf:phone '860-832-2723';
+    univ:teaches _:c1 , _:c2.
+
+_:bn1 rdf:type foaf:person, univ:Professor;
+    foaf:name 'Chad Williams';
+    vcard:title 'Doctor';
+    univ:title 'Professor', 'Derparment Chair';
+    univ:e-mail 'cwilliams@ccsu.edu';
+    foaf:phone '860-832-2719';
+    foaf:knows _:bn0, _:bn2 , _:bn3, _:bn4, _:bn5, _:bn6, _:bn7, _:bn8;
+    univ:teaches _:c3 , _:c4 . 
+
+_:bn2 rdf:type foaf:person, univ:Professor;
+    foaf:name 'Irena Pevac';
+    univ:title 'Professor';
+    univ:e-mail 'Pevac@ccsu.edu';
+    foaf:phone '860-832-2721';
+    univ:teaches _:c5 .
+
+_:bn3 rdf:type foaf:person, univ:Professor;
+    foaf:name 'Zdravko Markov';
+    univ:title 'Professor';
+    univ:e-mail 'MarkovZ@ccsu.edu';
+    foaf:phone '860-832-2711';
+    univ:teaches _:c6 .
+
+_:bn4 rdf:type foaf:person, univ:Professor;
+    foaf:name 'Stanislav Kurkovksy';
+    univ:title 'Professor';
+    univ:e-mail 'kurkovsky@ccsu.edu';
+    foaf:phone '860-832-2720';
+    univ:teaches _:c7 .
+
+_:bn5 rdf:type foaf:person, univ:Professor;
+    foaf:name 'Bradley Kjell';
+    univ:title 'Professor';
+    univ:e-mail 'Kjell@ccsu.edu';
+    foaf:phone '860-832-2717';
+    univ:teaches _:c8 .
+
+_:bn6 rdf:type foaf:person, univ:Professor;
+    foaf:name 'Sixia Chen';
+    univ:title 'Assistant Professor';
+    univ:e-mail 'schen@ccsu.edu';
+    foaf:phone '860-832-2718';
+    univ:teachs _:c9 .
+
+_:bn7 rdf:type foaf:person, univ:Professor;
+    foaf:name 'Yusuf Albayram';
+    univ:e-mail 'yusuf.albayram@ccsu.edu';
+    foaf:phone '860-832-2715';
+    univ:teaches _:c10 , _:c11 . 
+
+_:bn8 rdf:type foaf:person, univ:Professor;
+    foaf:name 'Fatemeh Abdollahzadeh';
+    univ:title 'Professor';
+    vcard:title 'Doctor';
+    univ:e-mail 'Abdollah@ccsu.edu';
+    foaf:phone '860-832-2714';
+    univ:teaches _:c12 .
+
+_:c1 rdf:type univ:Course;
+                    ex:name 'Linked Data Engineering';
+                    ex:days 'M' .
+
+_:c2 rdf:type univ:Course;
+                    ex:name 'Data Structures and Algorithms' .
+
+_:c3 rdf:type univ:Course;
+                    ex:name 'Computer Security';
+                    ex:days 'MW' .
+
+_:c4 rdf:type univ:Course;
+                    ex:name 'Computer Networking' .
+
+_:c5 rdf:type univ:Course;
+                    ex:name 'Intro to Java Programming' .
+
+_:c6 rdf:type univ:Course;
+                    ex:name 'Computer Architecture' .
+
+_:c7 rdf:type univ:Course;
+                    ex:name 'Agile Software' .
+
+_:c8 rdf:type univ:Course;
+                    ex:name 'C Programming Language' .
+
+_:c9 rdf:type univ:Course;
+                    ex:name 'Distributed Computing' .
+
+_:c10 rdf:type univ:Course;
+                    ex:name 'Mobile App Development';
+                    ex:days 'MW' .
+
+_:c11 rdf:type univ:Course;
+                    ex:name 'Software Testing';
+                    ex:days 'MW' .
+
+_:c12 rdf:type univ:Course;
+                   ex:name 'Linked Data Engineering';
+                   ex:days 'TR' .
+
+_:s1 rdf:type foaf:person, univ:Student, univ:LabAssistant;
+    univ:StudentId 123456;
+    univ:staffId 654321;
+    vcard:title 'graduate';
+    foaf:name 'Nicholas Cage';
+    univ:e-mail 'nicholas.cage@my.ccsu.edu';
+    foaf:phone '860-647-8907';
+    foaf:knows _:s2, _:s3;
+    univ:studies _:c9, _:c11 , _:c12 ;
+    univ:helpsWith _:c5 .
+
+_:s2 rdf:type foaf:person, univ:Student;
+    univ:StudentId 24687;
+    vcard:title 'undergraduate';
+    foaf:name 'James Cameron';
+    univ:e-mail 'james.cameron@my.ccsu.edu';
+    foaf:phone '860-643-8907';
+    univ:studies _:c2, _:c5 .
+
+_:s3 rdf:type foaf:person, univ:Student, univ:LabAssistant;
+    univ:StudentId 98765;
+    univ:staffId 56789;
+    vcard:title 'graduate';
+    foaf:name 'Stan Smith';
+    foaf:familyName 'Smith';
+    foaf:knows _:s4;
+    univ:e-mail 'stan.smith@my.ccsu.edu';
+    foaf:phone '860-567-8907';
+    univ:studies _:c9, _:c10 , _:c3 ;
+    univ:helpsWith _:c8 .
+
+_:s4 rdf:type foaf:person, univ:Student;
+    univ:StudentId 94531;
+    vcard:title 'undergraduate';
+    foaf:name 'Francince Smith';
+    foaf:familyName 'Smith';
+    univ:e-mail 'james.cameron@my.ccsu.edu';
+    foaf:phone '860-643-1957';
+    univ:studies _:c8, _:c4 .
+
+_:s5 rdf:type foaf:person, univ:Student;
+    univ:StudentId 47531;
+    vcard:title 'super senior';
+    foaf:name 'Shikamaru Nara';
+    univ:e-mail 'shikamaru.nara@my.ccsu.edu';
+    foaf:phone '860-643-1957';
+    univ:studies _:c9, _:c1 , _:c10 .
+
+_:s6 rdf:type foaf:person, univ:Student, univ:LabAssistant;
+    univ:StudentId 98765;
+    univ:staffId 56789;
+    vcard:title 'graduate';
+    foaf:name 'John Wick';
+    univ:e-mail 'john.wick@my.ccsu.edu';
+    foaf:phone '860-572-1907';
+    univ:studies _:c9, _:c12;
+    univ:helpsWith _:c11, _:c3 .
