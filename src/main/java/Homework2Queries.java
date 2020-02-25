@@ -149,29 +149,10 @@ public class Homework2Queries {
         try {
             ResultSet resultSet = queryExecution.execSelect();
             System.out.println(question);
-            printResultSet(questionWords, resultSet);
+            System.out.println(ResultSetFormatter.asText(resultSet));
         } finally {
             queryExecution.close();
         }
-    }
-
-    /**
-     *
-     * @param questionWords - question words from the select clause
-     * @param resultSet - results from the query
-     */
-    private static void printResultSet(List<String> questionWords , ResultSet resultSet) {
-        final List<RDFNode> rdfNodes = new ArrayList<RDFNode>(questionWords.size());
-        while(resultSet.hasNext()) {
-            QuerySolution soln = resultSet.nextSolution();
-            for(String word: questionWords) {
-                rdfNodes.add(soln.get(word));
-            }
-            rdfNodes.forEach(rdfNode -> System.out.print(rdfNode != null ? rdfNode.toString() + " " : ""));
-            System.out.println();
-            rdfNodes.clear();
-        }
-        System.out.println();
     }
 
     /**
