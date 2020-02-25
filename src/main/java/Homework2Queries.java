@@ -5,9 +5,11 @@ import org.apache.jena.rdf.model.ModelFactory;
 import org.apache.jena.rdf.model.RDFNode;
 import org.apache.jena.reasoner.Reasoner;
 import org.apache.jena.reasoner.ReasonerRegistry;
+import org.apache.jena.sparql.core.Quad;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Iterator;
 import java.util.List;
 
 public class Homework2Queries {
@@ -30,11 +32,16 @@ public class Homework2Queries {
         reasoner = reasoner.bindSchema(schema);
         InfModel owlSchema = ModelFactory.createInfModel(reasoner, schema);
 //        owlSchema.write(System.out, "TTL");
+        System.out.println("****************** Start SELECT Queries *************************");
         selectQuery1(owlSchema);
         selectQuery2(owlSchema);
         selectQuery3(owlSchema);
         selectQuery4(owlSchema);
         selectQuery5(owlSchema);
+        System.out.println("****************** End SELECT Queries *************************");
+        System.out.println("****************** Start CONSTRUCT Queries *************************");
+        constructQuery1(owlSchema);
+        System.out.println("****************** End CONSTRUCT Queries *************************");
     }
 
     private String getFilePath() {
@@ -99,6 +106,15 @@ public class Homework2Queries {
                     Arrays.asList("?name", "?email", "?phone"));
     }
 
+   private static void constructQuery1(InfModel owlSchema) {
+        String queryString = PREFIX +
+                            "CONSTRUCT {?student_name ex:status 'Part Time Student Staff' }" +
+                            "WHERE {?student a univ:Student ;" +
+                            "foaf:name ?student_name;" +
+                            "univ:staffId ?staffId}";
+        constructQuery(getQueryExecution(owlSchema, queryString), "Is there a graph of students who are part time staff?\n");
+   }
+
     /**
      * Method will execute a select query and print out the resultSet
      * @param queryExecution - object used to execute the select query
@@ -113,16 +129,6 @@ public class Homework2Queries {
         } finally {
             queryExecution.close();
         }
-    }
-
-    /**
-     *
-     * @param owlSchema
-     * @param queryString
-     * @return returns the QueryExecution to be used
-     */
-    private static QueryExecution getQueryExecution(InfModel owlSchema, String queryString) {
-        return QueryExecutionFactory.create(QueryFactory.create(queryString), owlSchema);
     }
 
     /**
@@ -142,5 +148,33 @@ public class Homework2Queries {
             rdfNodes.clear();
         }
         System.out.println();
+    }
+
+    /**
+     * Executes construct query and prints out the new graph
+     * @param queryExecution
+     * @param message
+     */
+    private static void constructQuery(QueryExecution queryExecution, String message) {
+        System.out.println(message);
+        try {
+            Iterator<Quad> triples = queryExecution.execConstructQuads();
+            while (triples.hasNext()) {
+                Quad quad = triples.next();
+                System.out.println(quad.getSubject() + " " + quad.getPredicate() + " " + quad.getObject());
+            }
+        } finally {
+            queryExecution.close();
+        }
+    }
+
+    /**
+     *
+     * @param owlSchema
+     * @param queryString
+     * @return returns the QueryExecution to be used
+     */
+    private static QueryExecution getQueryExecution(InfModel owlSchema, String queryString) {
+        return QueryExecutionFactory.create(QueryFactory.create(queryString), owlSchema);
     }
 }

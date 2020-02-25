@@ -145,9 +145,9 @@ _:s3 rdf:type foaf:person, univ:Student, univ:LabAssistant;
 _:s4 rdf:type foaf:person, univ:Student;
     univ:StudentId 94531;
     vcard:title 'undergraduate';
-    foaf:name 'Francince Smith';
+    foaf:name 'Francine Smith';
     foaf:familyName 'Smith';
-    univ:e-mail 'james.cameron@my.ccsu.edu';
+    univ:e-mail 'franicine.smith@my.ccsu.edu';
     foaf:phone '860-643-1957';
     univ:studies _:c8, _:c4 .
 
