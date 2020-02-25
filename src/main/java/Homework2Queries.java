@@ -2,15 +2,11 @@ import org.apache.jena.query.*;
 import org.apache.jena.rdf.model.InfModel;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.ModelFactory;
-import org.apache.jena.rdf.model.RDFNode;
 import org.apache.jena.reasoner.Reasoner;
 import org.apache.jena.reasoner.ReasonerRegistry;
 import org.apache.jena.sparql.core.Quad;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Iterator;
-import java.util.List;
 
 public class Homework2Queries {
 
@@ -62,8 +58,7 @@ public class Homework2Queries {
                             "ex:name 'C Programming Language'];" +
                             " foaf:name ?name}";
         selectQuery(getQueryExecution(owlSchema, queryString),
-                    "Who are the students that can help with C Programming Language?\n",
-                    Arrays.asList("?name"));
+                    "Who are the students that can help with C Programming Language?\n");
     }
 
     private static void selectQuery2(InfModel owlSchema) {
@@ -73,8 +68,7 @@ public class Homework2Queries {
                             "vcard:title 'Doctor';" +
                             "foaf:name ?name}";
         selectQuery(getQueryExecution(owlSchema, queryString) ,
-                    "Who are the professors who have the title of 'Doctor'?\n",
-                    Arrays.asList("?name"));
+                    "Who are the professors who have the title of 'Doctor'?\n");
     }
 
     private static void selectQuery3(InfModel owlSchema) {
@@ -84,8 +78,7 @@ public class Homework2Queries {
                                 "ex:name ?title ." +
                                 "OPTIONAL {?course ex:days ?days}}";
         selectQuery(getQueryExecution(owlSchema, queryString),
-                "What classes are offered and which days (if known) are they available?\n",
-                    Arrays.asList("?title", "?days"));
+                "What classes are offered and which days (if known) are they available?\n");
     }
 
     private static void selectQuery4(InfModel owlSchema) {
@@ -95,8 +88,7 @@ public class Homework2Queries {
                             "foaf:name ?name ;" +
                             "univ:staffId ?staffId ; }";
         selectQuery(getQueryExecution(owlSchema, queryString),
-                    "What are the names of the lab assistants and what are their univ ids?\n",
-                    Arrays.asList("?name", "?staffId"));
+                    "What are the names of the lab assistants and what are their univ ids?\n");
     }
 
     private static void selectQuery5(InfModel owlSchema) {
@@ -108,8 +100,7 @@ public class Homework2Queries {
                             "univ:e-mail ?email ;" +
                             "foaf:phone ?phone ;}";
         selectQuery(getQueryExecution(owlSchema, queryString),
-                    "Who is the department chair and what is their contact info?\n",
-                    Arrays.asList("?name", "?email", "?phone"));
+                    "Who is the department chair and what is their contact info?\n");
     }
 
    private static void constructQuery1(InfModel owlSchema) {
@@ -143,9 +134,8 @@ public class Homework2Queries {
      * Method will execute a select query and print out the resultSet
      * @param queryExecution - object used to execute the select query
      * @param question - question to print to console
-     * @param questionWords - params in the select query to be printed out
      */
-    private static void selectQuery(QueryExecution queryExecution, String question, List<String> questionWords) {
+    private static void selectQuery(QueryExecution queryExecution, String question) {
         try {
             ResultSet resultSet = queryExecution.execSelect();
             System.out.println(question);
