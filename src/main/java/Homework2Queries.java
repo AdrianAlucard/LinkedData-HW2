@@ -44,6 +44,10 @@ public class Homework2Queries {
         constructQuery1(owlSchema);
         constructQuery2(owlSchema);
         System.out.println("****************** End CONSTRUCT Queries *************************");
+
+        System.out.println("****************** Start ASK Query *************************");
+        askQuery1(owlSchema);
+        System.out.println("****************** End ASK Query *************************");
     }
 
     private String getFilePath() {
@@ -127,6 +131,14 @@ public class Homework2Queries {
         constructQuery(getQueryExecution(owlSchema, queryString), "Is there a graph of students who tutor courses?\n");
    }
 
+   private static void askQuery1(InfModel owlSchema) {
+        String queryString = PREFIX +
+                            "ASK {?student a univ:Student ;" +
+                            "univ:helpsWith ?course ." +
+                            "?course ex:name 'Computer Architecture'}";
+        askQuery(getQueryExecution(owlSchema, queryString), "Is there a student who can help with computer architecture?\n");
+   }
+
     /**
      * Method will execute a select query and print out the resultSet
      * @param queryExecution - object used to execute the select query
@@ -179,6 +191,15 @@ public class Homework2Queries {
             queryExecution.close();
         }
         System.out.println();
+    }
+
+    private static void askQuery(QueryExecution queryExecution, String message) {
+        System.out.println(message);
+        try {
+            System.out.println(queryExecution.execAsk() ? "Yes" : "Nope");
+        } finally {
+            queryExecution.close();
+        }
     }
 
     /**
