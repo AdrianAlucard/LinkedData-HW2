@@ -39,8 +39,10 @@ public class Homework2Queries {
         selectQuery4(owlSchema);
         selectQuery5(owlSchema);
         System.out.println("****************** End SELECT Queries *************************");
+
         System.out.println("****************** Start CONSTRUCT Queries *************************");
         constructQuery1(owlSchema);
+        constructQuery2(owlSchema);
         System.out.println("****************** End CONSTRUCT Queries *************************");
     }
 
@@ -115,6 +117,16 @@ public class Homework2Queries {
         constructQuery(getQueryExecution(owlSchema, queryString), "Is there a graph of students who are part time staff?\n");
    }
 
+   private static void constructQuery2(InfModel owlSchema) {
+        String queryString = PREFIX +
+                            "CONSTRUCT {?student_name ex:tutors ?course_name }" +
+                             "WHERE {?student a univ:Student ;" +
+                                "foaf:name ?student_name;" +
+                                "univ:helpsWith ?course ." +
+                                "?course ex:name ?course_name}";
+        constructQuery(getQueryExecution(owlSchema, queryString), "Is there a graph of students who tutor courses?\n");
+   }
+
     /**
      * Method will execute a select query and print out the resultSet
      * @param queryExecution - object used to execute the select query
@@ -166,6 +178,7 @@ public class Homework2Queries {
         } finally {
             queryExecution.close();
         }
+        System.out.println();
     }
 
     /**
