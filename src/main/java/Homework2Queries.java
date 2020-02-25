@@ -1,3 +1,5 @@
+import org.apache.jena.arq.querybuilder.DescribeBuilder;
+import org.apache.jena.arq.querybuilder.SelectBuilder;
 import org.apache.jena.graph.Triple;
 import org.apache.jena.query.*;
 import org.apache.jena.rdf.model.InfModel;
@@ -5,15 +7,14 @@ import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.ModelFactory;
 import org.apache.jena.reasoner.Reasoner;
 import org.apache.jena.reasoner.ReasonerRegistry;
+import org.apache.jena.riot.resultset.rw.ResultsReader;
 import org.apache.jena.sparql.core.Quad;
 import org.apache.jena.sparql.core.describe.DescribeBNodeClosure;
 import org.apache.jena.sparql.core.describe.DescribeBNodeClosureFactory;
 import org.apache.jena.sparql.core.describe.DescribeHandlerFactory;
 import org.apache.jena.sparql.core.describe.DescribeHandlerRegistry;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
 
 public class Homework2Queries {
     private static String PREFIX = "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>" +
@@ -79,7 +80,16 @@ public class Homework2Queries {
     }
 
     public static void describeQuery(QueryObject queryObject, InfModel owlSchema) {
-        describeQuery(getQueryExecution(owlSchema, queryObject.queryString), queryObject.message);
+        Map<String, String> prefixes = new HashMap<>();
+        prefixes.put("univ", "http://www.cs.ccsu.edu/~neli/university.owl#");
+        prefixes.put("foaf", "http://xmlns.com/foaf/0.1/");
+        prefixes.put("ex", "http://example.org/");
+        DescribeBuilder describeBuilder = new DescribeBuilder()
+                .addPrefixes(prefixes)
+                .addVar("?prof")
+                .addWhere("?prof", "a", "univ:Professor")
+                .addWhere("?prof","foaf:name", "Neli Zlatareva");
+        describeQuery(QueryExecutionFactory.create(describeBuilder.build(), owlSchema), queryObject.message);
     }
 
     /**
@@ -130,7 +140,8 @@ public class Homework2Queries {
         try {
             Iterator<Triple> triples = queryExecution.execDescribeTriples();
             while(triples.hasNext()) {
-                System.out.println(triples.next().toString());
+                Triple triple = triples.next();
+                System.out.println(triple.getSubject() + " " + triple.getPredicate() + " " + triple.getObject());
             }
         } finally {
             queryExecution.close();
@@ -205,7 +216,7 @@ public class Homework2Queries {
         queryObjects.add(new QueryObject("Describe Professor Neli Zlatareva" ,
                     PREFIX + "DESCRIBE ?prof" +
                             "WHERE {?prof a univ:Professor ;" +
-                            "foaf:name 'Neli Zlatareva'" +
+                            "foaf:name Neli Zlatareva" +
                             "} LIMIT 1", QueryObject.QueryType.DESCRIBE));
     }
 
