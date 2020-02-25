@@ -1,3 +1,4 @@
+import org.apache.jena.graph.Triple;
 import org.apache.jena.query.*;
 import org.apache.jena.rdf.model.InfModel;
 import org.apache.jena.rdf.model.Model;
@@ -5,13 +6,18 @@ import org.apache.jena.rdf.model.ModelFactory;
 import org.apache.jena.reasoner.Reasoner;
 import org.apache.jena.reasoner.ReasonerRegistry;
 import org.apache.jena.sparql.core.Quad;
+import org.apache.jena.sparql.core.describe.DescribeBNodeClosure;
+import org.apache.jena.sparql.core.describe.DescribeBNodeClosureFactory;
+import org.apache.jena.sparql.core.describe.DescribeHandlerFactory;
+import org.apache.jena.sparql.core.describe.DescribeHandlerRegistry;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
 public class Homework2Queries {
-    private static String PREFIX = "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>" +
+    private static String PREFIX = "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>" +
+            "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>" +
             "PREFIX foaf: <http://xmlns.com/foaf/0.1/>" +
             "PREFIX univ: <http://www.cs.ccsu.edu/~neli/university.owl#>" +
             "PREFIX vcard: <http://www.w3.org/vcard/ns#>" +
@@ -48,6 +54,12 @@ public class Homework2Queries {
                     .filter(queryObject -> queryObject.queryType.equals(QueryObject.QueryType.ASK))
                     .forEach(queryObject -> askQuery(queryObject, owlSchema));
         System.out.println("****************** End ASK Query *************************");
+
+        System.out.println("****************** Start DESCRIBE Query *************************");
+        queryObjects.stream()
+                    .filter(queryObject -> queryObject.queryType.equals(QueryObject.QueryType.DESCRIBE))
+                    .forEach(queryObject -> describeQuery(queryObject, owlSchema));
+        System.out.println("****************** End DESCRIBE Query *************************");
     }
 
     private String getFilePath() {
@@ -64,6 +76,10 @@ public class Homework2Queries {
 
     public static void askQuery(QueryObject queryObject, InfModel owlSchema) {
         askQuery(getQueryExecution(owlSchema, queryObject.queryString), queryObject.message);
+    }
+
+    public static void describeQuery(QueryObject queryObject, InfModel owlSchema) {
+        describeQuery(getQueryExecution(owlSchema, queryObject.queryString), queryObject.message);
     }
 
     /**
@@ -104,6 +120,18 @@ public class Homework2Queries {
         System.out.println(message);
         try {
             System.out.println(queryExecution.execAsk() ? "Yes" : "Nope");
+        } finally {
+            queryExecution.close();
+        }
+    }
+
+    private static void describeQuery(QueryExecution queryExecution, String message) {
+        System.out.println(message);
+        try {
+            Iterator<Triple> triples = queryExecution.execDescribeTriples();
+            while(triples.hasNext()) {
+                System.out.println(triples.next().toString());
+            }
         } finally {
             queryExecution.close();
         }
@@ -174,6 +202,11 @@ public class Homework2Queries {
                 "ASK {?student a univ:Student ;" +
                 "univ:helpsWith ?course ." +
                 "?course ex:name 'Computer Architecture'}", QueryObject.QueryType.ASK));
+        queryObjects.add(new QueryObject("Describe Professor Neli Zlatareva" ,
+                    PREFIX + "DESCRIBE ?prof" +
+                            "WHERE {?prof a univ:Professor ;" +
+                            "foaf:name 'Neli Zlatareva'" +
+                            "} LIMIT 1", QueryObject.QueryType.DESCRIBE));
     }
 
     static class QueryObject {
