@@ -1,8 +1,6 @@
 import org.apache.jena.graph.Triple;
 import org.apache.jena.query.*;
-import org.apache.jena.rdf.model.InfModel;
-import org.apache.jena.rdf.model.Model;
-import org.apache.jena.rdf.model.ModelFactory;
+import org.apache.jena.rdf.model.*;
 import org.apache.jena.reasoner.Reasoner;
 import org.apache.jena.reasoner.ReasonerRegistry;
 import org.apache.jena.sparql.core.Quad;
@@ -128,10 +126,11 @@ public class Homework2Queries {
     private static void describeQuery(QueryExecution queryExecution, String message) {
         System.out.println(message);
         try {
-            Iterator<Triple> triples = queryExecution.execDescribeTriples();
-            while(triples.hasNext()) {
-                System.out.println(triples.next().toString());
-            }
+            Model model = queryExecution.execDescribe();
+            Reasoner reasoner = ReasonerRegistry.getOWLReasoner();
+            reasoner = reasoner.bindSchema(model);
+            InfModel owlSchema = ModelFactory.createInfModel(reasoner, model);
+            owlSchema.write(System.out, "TTL");
         } finally {
             queryExecution.close();
         }
