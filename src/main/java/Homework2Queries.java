@@ -203,7 +203,7 @@ public class Homework2Queries {
                 "univ:helpsWith ?course ." +
                 "?course ex:name 'Computer Architecture'}", QueryObject.QueryType.ASK));
         queryObjects.add(new QueryObject("Describe Professor Neli Zlatareva" ,
-                    PREFIX + "DESCRIBE ?prof" +
+                    PREFIX + "DESCRIBE ?prof " +
                             "WHERE {?prof a univ:Professor ;" +
                             "foaf:name 'Neli Zlatareva'" +
                             "} LIMIT 1", QueryObject.QueryType.DESCRIBE));
