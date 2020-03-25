@@ -126,11 +126,7 @@ public class Homework2Queries {
     private static void describeQuery(QueryExecution queryExecution, String message) {
         System.out.println(message);
         try {
-            Model model = queryExecution.execDescribe();
-            Reasoner reasoner = ReasonerRegistry.getOWLReasoner();
-            reasoner = reasoner.bindSchema(model);
-            InfModel owlSchema = ModelFactory.createInfModel(reasoner, model);
-            owlSchema.write(System.out, "TTL");
+            queryExecution.execDescribe().write(System.out, "TTL");
         } finally {
             queryExecution.close();
         }
