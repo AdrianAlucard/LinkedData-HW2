@@ -14,8 +14,6 @@ import java.util.Iterator;
  * objects necessary for querying.
  */
 public class QueryService {
-    private Model model;
-    private Reasoner reasoner;
     private InfModel infModel;
 
     /**
@@ -37,8 +35,6 @@ public class QueryService {
         reasoner = reasoner.bindSchema(model);
         InfModel owlSchema = ModelFactory.createInfModel(reasoner, model);
 
-        queryService.setModel(model);
-        queryService.setReasoner(reasoner);
         queryService.setInfModel(owlSchema);
 
         return queryService;
@@ -132,14 +128,6 @@ public class QueryService {
 
     private String getFilePath(String fileName) {
         return this.getClass().getResource(fileName).getFile();
-    }
-
-    private void setModel(Model model) {
-        this.model = model;
-    }
-
-    private void setReasoner(Reasoner reasoner) {
-        this.reasoner = reasoner;
     }
 
     private void setInfModel(InfModel infModel) {
