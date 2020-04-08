@@ -1,16 +1,4 @@
-import org.apache.jena.graph.Triple;
-import org.apache.jena.query.*;
-import org.apache.jena.rdf.model.*;
-import org.apache.jena.reasoner.Reasoner;
-import org.apache.jena.reasoner.ReasonerRegistry;
-import org.apache.jena.sparql.core.Quad;
-import org.apache.jena.sparql.core.describe.DescribeBNodeClosure;
-import org.apache.jena.sparql.core.describe.DescribeBNodeClosureFactory;
-import org.apache.jena.sparql.core.describe.DescribeHandlerFactory;
-import org.apache.jena.sparql.core.describe.DescribeHandlerRegistry;
-
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
 public class Homework2Queries {
@@ -23,123 +11,31 @@ public class Homework2Queries {
     private static List<QueryObject> queryObjects;
 
     public static void main(String[] args) {
-        Homework2Queries homework2Queries = new Homework2Queries();
-        Model schema = ModelFactory.createOntologyModel();
-        try {
-            schema.read(homework2Queries.getFilePath());
-        } catch(Exception ex) {
-            System.err.println("welp this sucks: " + ex);
-        }
+        QueryService queryService = QueryService.buildOwlQueryService("hw2.ttl");
 
-        Reasoner reasoner = ReasonerRegistry.getOWLReasoner();
-        reasoner = reasoner.bindSchema(schema);
-        InfModel owlSchema = ModelFactory.createInfModel(reasoner, schema);
-//        owlSchema.write(System.out, "TTL");
         System.out.println("****************** Start SELECT Queries *************************");
         queryObjects.stream()
                     .filter(queryObject -> queryObject.queryType.equals(QueryObject.QueryType.SELECT))
-                    .forEach(queryObject -> selectQuery(queryObject, owlSchema));
+                    .forEach(queryObject -> queryService.selectQuery(queryObject));
         System.out.println("****************** End SELECT Queries *************************");
 
         System.out.println("****************** Start CONSTRUCT Queries *************************");
         queryObjects.stream()
                     .filter(queryObject -> queryObject.queryType.equals(QueryObject.QueryType.CONSTRUCT))
-                    .forEach(queryObject -> constructQuery(queryObject, owlSchema));
+                    .forEach(queryObject -> queryService.constructQuery(queryObject));
         System.out.println("****************** End CONSTRUCT Queries *************************");
 
         System.out.println("****************** Start ASK Query *************************");
         queryObjects.stream()
                     .filter(queryObject -> queryObject.queryType.equals(QueryObject.QueryType.ASK))
-                    .forEach(queryObject -> askQuery(queryObject, owlSchema));
+                    .forEach(queryObject -> queryService.askQuery(queryObject));
         System.out.println("****************** End ASK Query *************************");
 
         System.out.println("****************** Start DESCRIBE Query *************************");
         queryObjects.stream()
                     .filter(queryObject -> queryObject.queryType.equals(QueryObject.QueryType.DESCRIBE))
-                    .forEach(queryObject -> describeQuery(queryObject, owlSchema));
+                    .forEach(queryObject -> queryService.describeQuery(queryObject));
         System.out.println("****************** End DESCRIBE Query *************************");
-    }
-
-    private String getFilePath() {
-        return this.getClass().getResource("hw2.ttl").getFile();
-    }
-
-    public static void selectQuery(QueryObject queryObject, InfModel owlSchema) {
-        selectQuery(getQueryExecution(owlSchema, queryObject.queryString), queryObject.message);
-    }
-
-    public static  void constructQuery(QueryObject queryObject, InfModel owlSchema) {
-        constructQuery(getQueryExecution(owlSchema, queryObject.queryString), queryObject.message);
-    }
-
-    public static void askQuery(QueryObject queryObject, InfModel owlSchema) {
-        askQuery(getQueryExecution(owlSchema, queryObject.queryString), queryObject.message);
-    }
-
-    public static void describeQuery(QueryObject queryObject, InfModel owlSchema) {
-        describeQuery(getQueryExecution(owlSchema, queryObject.queryString), queryObject.message);
-    }
-
-    /**
-     * Method will execute a select query and print out the resultSet
-     * @param queryExecution - object used to execute the select query
-     * @param question - question to print to console
-     */
-    private static void selectQuery(QueryExecution queryExecution, String question) {
-        try {
-            ResultSet resultSet = queryExecution.execSelect();
-            System.out.println(question);
-            System.out.println(ResultSetFormatter.asText(resultSet));
-        } finally {
-            queryExecution.close();
-        }
-    }
-
-    /**
-     * Executes construct query and prints out the new graph
-     * @param queryExecution
-     * @param message
-     */
-    private static void constructQuery(QueryExecution queryExecution, String message) {
-        System.out.println(message);
-        try {
-            Iterator<Quad> triples = queryExecution.execConstructQuads();
-            while (triples.hasNext()) {
-                Quad quad = triples.next();
-                System.out.println(quad.getSubject() + " " + quad.getPredicate() + " " + quad.getObject());
-            }
-        } finally {
-            queryExecution.close();
-        }
-        System.out.println();
-    }
-
-    private static void askQuery(QueryExecution queryExecution, String message) {
-        System.out.println(message);
-        try {
-            System.out.println(queryExecution.execAsk() ? "Yes" : "Nope");
-        } finally {
-            queryExecution.close();
-        }
-    }
-
-    private static void describeQuery(QueryExecution queryExecution, String message) {
-        System.out.println(message);
-        try {
-            queryExecution.execDescribe().write(System.out, "TTL");
-        } finally {
-            queryExecution.close();
-        }
-    }
-
-    /**
-     *
-     * @param owlSchema
-     * @param queryString
-     * @return returns the QueryExecution to be used
-     */
-    private static QueryExecution getQueryExecution(InfModel owlSchema, String queryString) {
-        return QueryExecutionFactory.create(QueryFactory.create(queryString), owlSchema);
     }
 
     // add objects to queryobjects list
@@ -202,21 +98,5 @@ public class Homework2Queries {
                             "WHERE {?prof a univ:Professor ;" +
                             "foaf:name 'Neli Zlatareva'" +
                             "} LIMIT 1", QueryObject.QueryType.DESCRIBE));
-    }
-
-    static class QueryObject {
-        String message;
-        String queryString;
-        QueryType queryType;
-
-        enum QueryType {
-            SELECT, CONSTRUCT, DESCRIBE, ASK
-        }
-
-        QueryObject(String message, String queryString, QueryType queryType) {
-            this.message = message;
-            this.queryString = queryString;
-            this.queryType = queryType;
-        }
     }
 }
