@@ -1,0 +1,917 @@
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dsbase: <http://data.cdc.gov/resource/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix socrata: <http://www.socrata.com/rdf/terms#> .
+@prefix ds:    <http://data.cdc.gov/resource/hc4f-j6nb/> .
+
+<https://data.cdc.gov/resource/hc4f-j6nb/row-ebkc.thji~yrh5>
+        a                              dsbase:hc4f-j6nb ;
+        rdfs:member                    <https://data.cdc.gov/resource/hc4f-j6nb> ;
+        ds:covid_deaths                "6" ;
+        ds:group                       "By state" ;
+        ds:indicator                   "Idaho" ;
+        ds:percent_expected_deaths     "0.92" ;
+        ds:pneumonia_and_covid_deaths  "4" ;
+        ds:pneumonia_deaths            "119" ;
+        ds:total_deaths                "2636" ;
+        socrata:rowID                  "row-ebkc.thji~yrh5" .
+
+<https://data.cdc.gov/resource/hc4f-j6nb/row-jipv~334n_cdkp>
+        a                              dsbase:hc4f-j6nb ;
+        rdfs:member                    <https://data.cdc.gov/resource/hc4f-j6nb> ;
+        ds:covid_deaths                "2" ;
+        ds:group                       "By state" ;
+        ds:indicator                   "South Dakota" ;
+        ds:percent_expected_deaths     "0.86" ;
+        ds:pneumonia_and_covid_deaths  "0" ;
+        ds:pneumonia_deaths            "81" ;
+        ds:total_deaths                "1426" ;
+        socrata:rowID                  "row-jipv~334n_cdkp" .
+
+<https://data.cdc.gov/resource/hc4f-j6nb/row-7vms~fvma.2niy>
+        a                              dsbase:hc4f-j6nb ;
+        rdfs:member                    <https://data.cdc.gov/resource/hc4f-j6nb> ;
+        ds:covid_deaths                "64" ;
+        ds:group                       "By state" ;
+        ds:indicator                   "Illinois" ;
+        ds:percent_expected_deaths     "0.9" ;
+        ds:pneumonia_and_covid_deaths  "36" ;
+        ds:pneumonia_deaths            "1233" ;
+        ds:total_deaths                "19429" ;
+        socrata:rowID                  "row-7vms~fvma.2niy" .
+
+<https://data.cdc.gov/resource/hc4f-j6nb/row-e99m-5h43_jdzm>
+        a                              dsbase:hc4f-j6nb ;
+        rdfs:member                    <https://data.cdc.gov/resource/hc4f-j6nb> ;
+        ds:covid_deaths                "12" ;
+        ds:group                       "By state" ;
+        ds:indicator                   "Minnesota" ;
+        ds:percent_expected_deaths     "0.95" ;
+        ds:pneumonia_and_covid_deaths  "5" ;
+        ds:pneumonia_deaths            "450" ;
+        ds:total_deaths                "8387" ;
+        socrata:rowID                  "row-e99m-5h43_jdzm" .
+
+<https://data.cdc.gov/resource/hc4f-j6nb/row-ttdn_ac97-tssx>
+        a                              dsbase:hc4f-j6nb ;
+        rdfs:member                    <https://data.cdc.gov/resource/hc4f-j6nb> ;
+        ds:covid_deaths                "43" ;
+        ds:group                       "By state" ;
+        ds:indicator                   "New Jersey" ;
+        ds:percent_expected_deaths     "0.89" ;
+        ds:pneumonia_and_covid_deaths  "24" ;
+        ds:pneumonia_deaths            "723" ;
+        ds:total_deaths                "13537" ;
+        socrata:rowID                  "row-ttdn_ac97-tssx" .
+
+<https://data.cdc.gov/resource/hc4f-j6nb/row-fnnt.7pn7~ih4c>
+        a                              dsbase:hc4f-j6nb ;
+        rdfs:member                    <https://data.cdc.gov/resource/hc4f-j6nb> ;
+        ds:covid_deaths                "0" ;
+        ds:group                       "By week" ;
+        ds:indicator                   "2/15/2020" ;
+        ds:percent_expected_deaths     "0.94" ;
+        ds:pneumonia_and_covid_deaths  "0" ;
+        ds:pneumonia_deaths            "2910" ;
+        ds:total_deaths                "55189" ;
+        socrata:rowID                  "row-fnnt.7pn7~ih4c" .
+
+<https://data.cdc.gov/resource/hc4f-j6nb/row-etep_xusn.7xjs>
+        a                              dsbase:hc4f-j6nb ;
+        rdfs:member                    <https://data.cdc.gov/resource/hc4f-j6nb> ;
+        ds:covid_deaths                "3307" ;
+        ds:group                       "By week" ;
+        ds:indicator                   "Total Deaths" ;
+        ds:percent_expected_deaths     "0.85" ;
+        ds:pneumonia_and_covid_deaths  "1410" ;
+        ds:pneumonia_deaths            "28475" ;
+        ds:total_deaths                "490389" ;
+        socrata:rowID                  "row-etep_xusn.7xjs" .
+
+<https://data.cdc.gov/resource/hc4f-j6nb/row-p94i~c922~re8p>
+        a                              dsbase:hc4f-j6nb ;
+        rdfs:member                    <https://data.cdc.gov/resource/hc4f-j6nb> ;
+        ds:covid_deaths                "14" ;
+        ds:group                       "By state" ;
+        ds:indicator                   "Oregon" ;
+        ds:percent_expected_deaths     "0.82" ;
+        ds:pneumonia_and_covid_deaths  "9" ;
+        ds:pneumonia_deaths            "251" ;
+        ds:total_deaths                "5995" ;
+        socrata:rowID                  "row-p94i~c922~re8p" .
+
+<https://data.cdc.gov/resource/hc4f-j6nb/row-nuwi.qatf_item>
+        a                              dsbase:hc4f-j6nb ;
+        rdfs:member                    <https://data.cdc.gov/resource/hc4f-j6nb> ;
+        ds:covid_deaths                "5" ;
+        ds:group                       "By state" ;
+        ds:indicator                   "New Hampshire" ;
+        ds:percent_expected_deaths     "0.95" ;
+        ds:pneumonia_and_covid_deaths  "3" ;
+        ds:pneumonia_deaths            "121" ;
+        ds:total_deaths                "2385" ;
+        socrata:rowID                  "row-nuwi.qatf_item" .
+
+<https://data.cdc.gov/resource/hc4f-j6nb/row-kz6r~rgpw~3xgn>
+        a                              dsbase:hc4f-j6nb ;
+        rdfs:member                    <https://data.cdc.gov/resource/hc4f-j6nb> ;
+        ds:covid_deaths                "55" ;
+        ds:group                       "By state" ;
+        ds:indicator                   "Massachusetts" ;
+        ds:percent_expected_deaths     "0.91" ;
+        ds:pneumonia_and_covid_deaths  "26" ;
+        ds:pneumonia_deaths            "797" ;
+        ds:total_deaths                "11194" ;
+        socrata:rowID                  "row-kz6r~rgpw~3xgn" .
+
+<https://data.cdc.gov/resource/hc4f-j6nb/row-24if-v6jb~yimg>
+        a                              dsbase:hc4f-j6nb ;
+        rdfs:member                    <https://data.cdc.gov/resource/hc4f-j6nb> ;
+        ds:covid_deaths                "4" ;
+        ds:group                       "By age" ;
+        ds:indicator                   "15-24 years" ;
+        ds:percent_expected_deaths     "0.78" ;
+        ds:pneumonia_and_covid_deaths  "2" ;
+        ds:pneumonia_deaths            "83" ;
+        ds:total_deaths                "4431" ;
+        socrata:rowID                  "row-24if-v6jb~yimg" .
+
+<https://data.cdc.gov/resource/hc4f-j6nb/row-ehtt-yke2.e69t>
+        a                              dsbase:hc4f-j6nb ;
+        rdfs:member                    <https://data.cdc.gov/resource/hc4f-j6nb> ;
+        ds:covid_deaths                "763" ;
+        ds:group                       "By age" ;
+        ds:indicator                   "65-74 years" ;
+        ds:percent_expected_deaths     "0.87" ;
+        ds:pneumonia_and_covid_deaths  "281" ;
+        ds:pneumonia_deaths            "5533" ;
+        ds:total_deaths                "96298" ;
+        socrata:rowID                  "row-ehtt-yke2.e69t" .
+
+<https://data.cdc.gov/resource/hc4f-j6nb/row-7f2m_iwt6.wm25>
+        a                              dsbase:hc4f-j6nb ;
+        rdfs:member                    <https://data.cdc.gov/resource/hc4f-j6nb> ;
+        ds:covid_deaths                "0" ;
+        ds:group                       "By age" ;
+        ds:indicator                   "5-14 years" ;
+        ds:percent_expected_deaths     "0.69" ;
+        ds:pneumonia_and_covid_deaths  "0" ;
+        ds:pneumonia_deaths            "26" ;
+        ds:total_deaths                "769" ;
+        socrata:rowID                  "row-7f2m_iwt6.wm25" .
+
+<https://data.cdc.gov/resource/hc4f-j6nb/row-2ze7.s8t3-4dai>
+        a                              dsbase:hc4f-j6nb ;
+        rdfs:member                    <https://data.cdc.gov/resource/hc4f-j6nb> ;
+        ds:covid_deaths                "0" ;
+        ds:group                       "By age" ;
+        ds:indicator                   "Under 1 year" ;
+        ds:percent_expected_deaths     "0.62" ;
+        ds:pneumonia_and_covid_deaths  "0" ;
+        ds:pneumonia_deaths            "19" ;
+        ds:total_deaths                "2605" ;
+        socrata:rowID                  "row-2ze7.s8t3-4dai" .
+
+<https://data.cdc.gov/resource/hc4f-j6nb/row-4dvs.z66n.bq28>
+        a                              dsbase:hc4f-j6nb ;
+        rdfs:member                    <https://data.cdc.gov/resource/hc4f-j6nb> ;
+        ds:covid_deaths                "0" ;
+        ds:group                       "By week" ;
+        ds:indicator                   "2/22/2020" ;
+        ds:percent_expected_deaths     "0.94" ;
+        ds:pneumonia_and_covid_deaths  "0" ;
+        ds:pneumonia_deaths            "2872" ;
+        ds:total_deaths                "54761" ;
+        socrata:rowID                  "row-4dvs.z66n.bq28" .
+
+<https://data.cdc.gov/resource/hc4f-j6nb/row-38vh~h9m5-3dsr>
+        a                              dsbase:hc4f-j6nb ;
+        rdfs:member                    <https://data.cdc.gov/resource/hc4f-j6nb> ;
+        ds:covid_deaths                "7" ;
+        ds:group                       "By state" ;
+        ds:indicator                   "Alabama" ;
+        ds:percent_expected_deaths     "0.83" ;
+        ds:pneumonia_and_covid_deaths  "2" ;
+        ds:pneumonia_deaths            "443" ;
+        ds:total_deaths                "8842" ;
+        socrata:rowID                  "row-38vh~h9m5-3dsr" .
+
+<https://data.cdc.gov/resource/hc4f-j6nb/row-n82e_r8tv.usp4>
+        a                              dsbase:hc4f-j6nb ;
+        rdfs:member                    <https://data.cdc.gov/resource/hc4f-j6nb> ;
+        ds:covid_deaths                "0" ;
+        ds:group                       "By state" ;
+        ds:indicator                   "Connecticut" ;
+        ds:percent_expected_deaths     "0" ;
+        ds:pneumonia_and_covid_deaths  "0" ;
+        ds:pneumonia_deaths            "0" ;
+        ds:total_deaths                "0" ;
+        socrata:rowID                  "row-n82e_r8tv.usp4" .
+
+<https://data.cdc.gov/resource/hc4f-j6nb/row-7jpa.ntsm-287b>
+        a                              dsbase:hc4f-j6nb ;
+        rdfs:member                    <https://data.cdc.gov/resource/hc4f-j6nb> ;
+        ds:covid_deaths                "2" ;
+        ds:group                       "By state" ;
+        ds:indicator                   "Utah" ;
+        ds:percent_expected_deaths     "0.96" ;
+        ds:pneumonia_and_covid_deaths  "0" ;
+        ds:pneumonia_deaths            "183" ;
+        ds:total_deaths                "3604" ;
+        socrata:rowID                  "row-7jpa.ntsm-287b" .
+
+<https://data.cdc.gov/resource/hc4f-j6nb/row-vasr_urnj_wq5g>
+        a                              dsbase:hc4f-j6nb ;
+        rdfs:member                    <https://data.cdc.gov/resource/hc4f-j6nb> ;
+        ds:covid_deaths                "60" ;
+        ds:group                       "By state" ;
+        ds:indicator                   "Louisiana" ;
+        ds:percent_expected_deaths     "0.78" ;
+        ds:pneumonia_and_covid_deaths  "23" ;
+        ds:pneumonia_deaths            "282" ;
+        ds:total_deaths                "7209" ;
+        socrata:rowID                  "row-vasr_urnj_wq5g" .
+
+<https://data.cdc.gov/resource/hc4f-j6nb/row-4z7d.hm92.ekqh>
+        a                              dsbase:hc4f-j6nb ;
+        rdfs:member                    <https://data.cdc.gov/resource/hc4f-j6nb> ;
+        ds:covid_deaths                "0" ;
+        ds:group                       "By state" ;
+        ds:indicator                   "North Carolina" ;
+        ds:percent_expected_deaths     "0.24" ;
+        ds:pneumonia_and_covid_deaths  "0" ;
+        ds:pneumonia_deaths            "232" ;
+        ds:total_deaths                "4672" ;
+        socrata:rowID                  "row-4z7d.hm92.ekqh" .
+
+<https://data.cdc.gov/resource/hc4f-j6nb/row-mc7p.epxg-5qkh>
+        a                              dsbase:hc4f-j6nb ;
+        rdfs:member                    <https://data.cdc.gov/resource/hc4f-j6nb> ;
+        ds:covid_deaths                "3" ;
+        ds:group                       "By state" ;
+        ds:indicator                   "Kentucky" ;
+        ds:percent_expected_deaths     "0.73" ;
+        ds:pneumonia_and_covid_deaths  "1" ;
+        ds:pneumonia_deaths            "458" ;
+        ds:total_deaths                "7149" ;
+        socrata:rowID                  "row-mc7p.epxg-5qkh" .
+
+<https://data.cdc.gov/resource/hc4f-j6nb/row-2eep-u367_63yd>
+        a                              dsbase:hc4f-j6nb ;
+        rdfs:member                    <https://data.cdc.gov/resource/hc4f-j6nb> ;
+        ds:covid_deaths                "3307" ;
+        ds:group                       "By state" ;
+        ds:indicator                   "Total US" ;
+        ds:percent_expected_deaths     "0.85" ;
+        ds:pneumonia_and_covid_deaths  "1410" ;
+        ds:pneumonia_deaths            "28475" ;
+        ds:total_deaths                "490389" ;
+        socrata:rowID                  "row-2eep-u367_63yd" .
+
+<https://data.cdc.gov/resource/hc4f-j6nb/row-9xip~vrvg~wd9s>
+        a                              dsbase:hc4f-j6nb ;
+        rdfs:member                    <https://data.cdc.gov/resource/hc4f-j6nb> ;
+        ds:covid_deaths                "23" ;
+        ds:group                       "By state" ;
+        ds:indicator                   "Maryland" ;
+        ds:percent_expected_deaths     "0.93" ;
+        ds:pneumonia_and_covid_deaths  "10" ;
+        ds:pneumonia_deaths            "572" ;
+        ds:total_deaths                "9484" ;
+        socrata:rowID                  "row-9xip~vrvg~wd9s" .
+
+<https://data.cdc.gov/resource/hc4f-j6nb/row-8wi5_e6y9.eqih>
+        a                              dsbase:hc4f-j6nb ;
+        rdfs:member                    <https://data.cdc.gov/resource/hc4f-j6nb> ;
+        ds:covid_deaths                "0" ;
+        ds:group                       "By state" ;
+        ds:indicator                   "Montana" ;
+        ds:percent_expected_deaths     "0.85" ;
+        ds:pneumonia_and_covid_deaths  "0" ;
+        ds:pneumonia_deaths            "82" ;
+        ds:total_deaths                "1780" ;
+        socrata:rowID                  "row-8wi5_e6y9.eqih" .
+
+<https://data.cdc.gov/resource/hc4f-j6nb/row-skbm-6y8p.hbnx>
+        a                              dsbase:hc4f-j6nb ;
+        rdfs:member                    <https://data.cdc.gov/resource/hc4f-j6nb> ;
+        ds:covid_deaths                "135" ;
+        ds:group                       "By state" ;
+        ds:indicator                   "California" ;
+        ds:percent_expected_deaths     "0.91" ;
+        ds:pneumonia_and_covid_deaths  "70" ;
+        ds:pneumonia_deaths            "3437" ;
+        ds:total_deaths                "50784" ;
+        socrata:rowID                  "row-skbm-6y8p.hbnx" .
+
+<https://data.cdc.gov/resource/hc4f-j6nb/row-kztf_ituf-mk37>
+        a                              dsbase:hc4f-j6nb ;
+        rdfs:member                    <https://data.cdc.gov/resource/hc4f-j6nb> ;
+        ds:covid_deaths                "0" ;
+        ds:group                       "By state" ;
+        ds:indicator                   "Nebraska" ;
+        ds:percent_expected_deaths     "0.82" ;
+        ds:pneumonia_and_covid_deaths  "0" ;
+        ds:pneumonia_deaths            "184" ;
+        ds:total_deaths                "2847" ;
+        socrata:rowID                  "row-kztf_ituf-mk37" .
+
+<https://data.cdc.gov/resource/hc4f-j6nb/row-i9gu~ki3z_dmr8>
+        a                              dsbase:hc4f-j6nb ;
+        rdfs:member                    <https://data.cdc.gov/resource/hc4f-j6nb> ;
+        ds:covid_deaths                "400" ;
+        ds:group                       "By age" ;
+        ds:indicator                   "55-64 years" ;
+        ds:percent_expected_deaths     "0.82" ;
+        ds:pneumonia_and_covid_deaths  "154" ;
+        ds:pneumonia_deaths            "3253" ;
+        ds:total_deaths                "61830" ;
+        socrata:rowID                  "row-i9gu~ki3z_dmr8" .
+
+<https://data.cdc.gov/resource/hc4f-j6nb/row-um9g~6y7f_kd9p>
+        a                              dsbase:hc4f-j6nb ;
+        rdfs:member                    <https://data.cdc.gov/resource/hc4f-j6nb> ;
+        ds:covid_deaths                "8" ;
+        ds:group                       "By state" ;
+        ds:indicator                   "Tennessee" ;
+        ds:percent_expected_deaths     "0.91" ;
+        ds:pneumonia_and_covid_deaths  "6" ;
+        ds:pneumonia_deaths            "798" ;
+        ds:total_deaths                "13548" ;
+        socrata:rowID                  "row-um9g~6y7f_kd9p" .
+
+<https://data.cdc.gov/resource/hc4f-j6nb/row-eguq.a8h9-hhv9>
+        a                              dsbase:hc4f-j6nb ;
+        rdfs:member                    <https://data.cdc.gov/resource/hc4f-j6nb> ;
+        ds:covid_deaths                "508" ;
+        ds:group                       "By state" ;
+        ds:indicator                   "New York" ;
+        ds:percent_expected_deaths     "1" ;
+        ds:pneumonia_and_covid_deaths  "282" ;
+        ds:pneumonia_deaths            "1752" ;
+        ds:total_deaths                "20336" ;
+        socrata:rowID                  "row-eguq.a8h9-hhv9" .
+
+<https://data.cdc.gov/resource/hc4f-j6nb/row-rvur_zd5h_7scs>
+        a                              dsbase:hc4f-j6nb ;
+        rdfs:member                    <https://data.cdc.gov/resource/hc4f-j6nb> ;
+        ds:covid_deaths                "213" ;
+        ds:group                       "By state" ;
+        ds:indicator                   "Washington" ;
+        ds:percent_expected_deaths     "0.93" ;
+        ds:pneumonia_and_covid_deaths  "88" ;
+        ds:pneumonia_deaths            "678" ;
+        ds:total_deaths                "10875" ;
+        socrata:rowID                  "row-rvur_zd5h_7scs" .
+
+<https://data.cdc.gov/resource/hc4f-j6nb/row-ftu4~v5ud~58vc>
+        a                              dsbase:hc4f-j6nb ;
+        rdfs:member                    <https://data.cdc.gov/resource/hc4f-j6nb> ;
+        ds:covid_deaths                "82" ;
+        ds:group                       "By state" ;
+        ds:indicator                   "Michigan" ;
+        ds:percent_expected_deaths     "0.9" ;
+        ds:pneumonia_and_covid_deaths  "34" ;
+        ds:pneumonia_deaths            "919" ;
+        ds:total_deaths                "17639" ;
+        socrata:rowID                  "row-ftu4~v5ud~58vc" .
+
+<https://data.cdc.gov/resource/hc4f-j6nb/row-vphh_h42r.8ekc>
+        a                              dsbase:hc4f-j6nb ;
+        rdfs:member                    <https://data.cdc.gov/resource/hc4f-j6nb> ;
+        ds:covid_deaths                "1" ;
+        ds:group                       "By state" ;
+        ds:indicator                   "Rhode Island" ;
+        ds:percent_expected_deaths     "0.76" ;
+        ds:pneumonia_and_covid_deaths  "1" ;
+        ds:pneumonia_deaths            "57" ;
+        ds:total_deaths                "1619" ;
+        socrata:rowID                  "row-vphh_h42r.8ekc" .
+
+<https://data.cdc.gov/resource/hc4f-j6nb/row-gysg_uv5m.y6yu>
+        a                              dsbase:hc4f-j6nb ;
+        rdfs:member                    <https://data.cdc.gov/resource/hc4f-j6nb> ;
+        ds:covid_deaths                "11" ;
+        ds:group                       "By state" ;
+        ds:indicator                   "Oklahoma" ;
+        ds:percent_expected_deaths     "0.77" ;
+        ds:pneumonia_and_covid_deaths  "3" ;
+        ds:pneumonia_deaths            "399" ;
+        ds:total_deaths                "6321" ;
+        socrata:rowID                  "row-gysg_uv5m.y6yu" .
+
+<https://data.cdc.gov/resource/hc4f-j6nb/row-udtd-kgme.fpzx>
+        a                              dsbase:hc4f-j6nb ;
+        rdfs:member                    <https://data.cdc.gov/resource/hc4f-j6nb> ;
+        ds:covid_deaths                "1406" ;
+        ds:group                       "By week" ;
+        ds:indicator                   "3/28/2020" ;
+        ds:percent_expected_deaths     "0.74" ;
+        ds:pneumonia_and_covid_deaths  "592" ;
+        ds:pneumonia_deaths            "3164" ;
+        ds:total_deaths                "41353" ;
+        socrata:rowID                  "row-udtd-kgme.fpzx" .
+
+<https://data.cdc.gov/resource/hc4f-j6nb/row-6w48_u99i-f3e8>
+        a                              dsbase:hc4f-j6nb ;
+        rdfs:member                    <https://data.cdc.gov/resource/hc4f-j6nb> ;
+        ds:covid_deaths                "1" ;
+        ds:group                       "By state" ;
+        ds:indicator                   "District of Columbia" ;
+        ds:percent_expected_deaths     "0.85" ;
+        ds:pneumonia_and_covid_deaths  "0" ;
+        ds:pneumonia_deaths            "67" ;
+        ds:total_deaths                "1030" ;
+        socrata:rowID                  "row-6w48_u99i-f3e8" .
+
+<https://data.cdc.gov/resource/hc4f-j6nb/row-yt32-c4i2~yhau>
+        a                              dsbase:hc4f-j6nb ;
+        rdfs:member                    <https://data.cdc.gov/resource/hc4f-j6nb> ;
+        ds:covid_deaths                "18" ;
+        ds:group                       "By state" ;
+        ds:indicator                   "South Carolina" ;
+        ds:percent_expected_deaths     "0.96" ;
+        ds:pneumonia_and_covid_deaths  "6" ;
+        ds:pneumonia_deaths            "438" ;
+        ds:total_deaths                "9467" ;
+        socrata:rowID                  "row-yt32-c4i2~yhau" .
+
+<https://data.cdc.gov/resource/hc4f-j6nb/row-bbi7.if2u~zicc>
+        a                              dsbase:hc4f-j6nb ;
+        rdfs:member                    <https://data.cdc.gov/resource/hc4f-j6nb> ;
+        ds:covid_deaths                "4" ;
+        ds:group                       "By state" ;
+        ds:indicator                   "Iowa" ;
+        ds:percent_expected_deaths     "0.89" ;
+        ds:pneumonia_and_covid_deaths  "1" ;
+        ds:pneumonia_deaths            "325" ;
+        ds:total_deaths                "5503" ;
+        socrata:rowID                  "row-bbi7.if2u~zicc" .
+
+<https://data.cdc.gov/resource/hc4f-j6nb/row-7wze~y6my-emne>
+        a                              dsbase:hc4f-j6nb ;
+        rdfs:member                    <https://data.cdc.gov/resource/hc4f-j6nb> ;
+        ds:covid_deaths                "0" ;
+        ds:group                       "By week" ;
+        ds:indicator                   "2/8/2020" ;
+        ds:percent_expected_deaths     "0.95" ;
+        ds:pneumonia_and_covid_deaths  "0" ;
+        ds:pneumonia_deaths            "3002" ;
+        ds:total_deaths                "56587" ;
+        socrata:rowID                  "row-7wze~y6my-emne" .
+
+<https://data.cdc.gov/resource/hc4f-j6nb/row-q2ag.v3je.35e5>
+        a                              dsbase:hc4f-j6nb ;
+        rdfs:member                    <https://data.cdc.gov/resource/hc4f-j6nb> ;
+        ds:covid_deaths                "1" ;
+        ds:group                       "By state" ;
+        ds:indicator                   "North Dakota" ;
+        ds:percent_expected_deaths     "0.89" ;
+        ds:pneumonia_and_covid_deaths  "0" ;
+        ds:pneumonia_deaths            "89" ;
+        ds:total_deaths                "1256" ;
+        socrata:rowID                  "row-q2ag.v3je.35e5" .
+
+<https://data.cdc.gov/resource/hc4f-j6nb/row-7ezm-tdpn~su9u>
+        a                              dsbase:hc4f-j6nb ;
+        rdfs:member                    <https://data.cdc.gov/resource/hc4f-j6nb> ;
+        ds:covid_deaths                "17" ;
+        ds:group                       "By state" ;
+        ds:indicator                   "Mississippi" ;
+        ds:percent_expected_deaths     "0.91" ;
+        ds:pneumonia_and_covid_deaths  "3" ;
+        ds:pneumonia_deaths            "381" ;
+        ds:total_deaths                "5803" ;
+        socrata:rowID                  "row-7ezm-tdpn~su9u" .
+
+<https://data.cdc.gov/resource/hc4f-j6nb/row-2ju2_cxtp-mmsu>
+        a                              dsbase:hc4f-j6nb ;
+        rdfs:member                    <https://data.cdc.gov/resource/hc4f-j6nb> ;
+        ds:covid_deaths                "51" ;
+        ds:group                       "By state" ;
+        ds:indicator                   "Colorado" ;
+        ds:percent_expected_deaths     "0.95" ;
+        ds:pneumonia_and_covid_deaths  "25" ;
+        ds:pneumonia_deaths            "380" ;
+        ds:total_deaths                "7575" ;
+        socrata:rowID                  "row-2ju2_cxtp-mmsu" .
+
+<https://data.cdc.gov/resource/hc4f-j6nb/row-pj4p_jv46~r7nq>
+        a                              dsbase:hc4f-j6nb ;
+        rdfs:member                    <https://data.cdc.gov/resource/hc4f-j6nb> ;
+        ds:covid_deaths                "29" ;
+        ds:group                       "By age" ;
+        ds:indicator                   "25-34 years" ;
+        ds:percent_expected_deaths     "0.82" ;
+        ds:pneumonia_and_covid_deaths  "11" ;
+        ds:pneumonia_deaths            "219" ;
+        ds:total_deaths                "9181" ;
+        socrata:rowID                  "row-pj4p_jv46~r7nq" .
+
+<https://data.cdc.gov/resource/hc4f-j6nb/row-hnuv.e4g2.rq6d>
+        a                              dsbase:hc4f-j6nb ;
+        rdfs:member                    <https://data.cdc.gov/resource/hc4f-j6nb> ;
+        ds:covid_deaths                "57" ;
+        ds:group                       "By state" ;
+        ds:indicator                   "Florida" ;
+        ds:percent_expected_deaths     "0.93" ;
+        ds:pneumonia_and_covid_deaths  "19" ;
+        ds:pneumonia_deaths            "2036" ;
+        ds:total_deaths                "39791" ;
+        socrata:rowID                  "row-hnuv.e4g2.rq6d" .
+
+<https://data.cdc.gov/resource/hc4f-j6nb/row-bfct.myh4.ddk3>
+        a                              dsbase:hc4f-j6nb ;
+        rdfs:member                    <https://data.cdc.gov/resource/hc4f-j6nb> ;
+        ds:covid_deaths                "9" ;
+        ds:group                       "By state" ;
+        ds:indicator                   "Missouri" ;
+        ds:percent_expected_deaths     "0.83" ;
+        ds:pneumonia_and_covid_deaths  "6" ;
+        ds:pneumonia_deaths            "538" ;
+        ds:total_deaths                "10888" ;
+        socrata:rowID                  "row-bfct.myh4.ddk3" .
+
+<https://data.cdc.gov/resource/hc4f-j6nb/row-zg64.ry5n-i3af>
+        a                              dsbase:hc4f-j6nb ;
+        rdfs:member                    <https://data.cdc.gov/resource/hc4f-j6nb> ;
+        ds:covid_deaths                "4" ;
+        ds:group                       "By state" ;
+        ds:indicator                   "Kansas" ;
+        ds:percent_expected_deaths     "0.89" ;
+        ds:pneumonia_and_covid_deaths  "2" ;
+        ds:pneumonia_deaths            "261" ;
+        ds:total_deaths                "4846" ;
+        socrata:rowID                  "row-zg64.ry5n-i3af" .
+
+<https://data.cdc.gov/resource/hc4f-j6nb/row-psgg-dxzk_tmgk>
+        a                              dsbase:hc4f-j6nb ;
+        rdfs:member                    <https://data.cdc.gov/resource/hc4f-j6nb> ;
+        ds:covid_deaths                "1450" ;
+        ds:group                       "By week" ;
+        ds:indicator                   "4/4/2020" ;
+        ds:percent_expected_deaths     "0.36" ;
+        ds:pneumonia_and_covid_deaths  "635" ;
+        ds:pneumonia_deaths            "1885" ;
+        ds:total_deaths                "20281" ;
+        socrata:rowID                  "row-psgg-dxzk_tmgk" .
+
+<https://data.cdc.gov/resource/hc4f-j6nb/row-v64j_pffe~k5ti>
+        a                              dsbase:hc4f-j6nb ;
+        rdfs:member                    <https://data.cdc.gov/resource/hc4f-j6nb> ;
+        ds:covid_deaths                "0" ;
+        ds:group                       "By week" ;
+        ds:indicator                   "2/1/2020" ;
+        ds:percent_expected_deaths     "0.95" ;
+        ds:pneumonia_and_covid_deaths  "0" ;
+        ds:pneumonia_deaths            "3002" ;
+        ds:total_deaths                "56266" ;
+        socrata:rowID                  "row-v64j_pffe~k5ti" .
+
+<https://data.cdc.gov/resource/hc4f-j6nb/row-ejvr.inwx.mdrc>
+        a                              dsbase:hc4f-j6nb ;
+        rdfs:member                    <https://data.cdc.gov/resource/hc4f-j6nb> ;
+        ds:covid_deaths                "38" ;
+        ds:group                       "By state" ;
+        ds:indicator                   "Pennsylvania" ;
+        ds:percent_expected_deaths     "0.69" ;
+        ds:pneumonia_and_covid_deaths  "18" ;
+        ds:pneumonia_deaths            "977" ;
+        ds:total_deaths                "19375" ;
+        socrata:rowID                  "row-ejvr.inwx.mdrc" .
+
+<https://data.cdc.gov/resource/hc4f-j6nb/row-38en-ae5a~x7vh>
+        a                              dsbase:hc4f-j6nb ;
+        rdfs:member                    <https://data.cdc.gov/resource/hc4f-j6nb> ;
+        ds:covid_deaths                "16" ;
+        ds:group                       "By state" ;
+        ds:indicator                   "Wisconsin" ;
+        ds:percent_expected_deaths     "0.94" ;
+        ds:pneumonia_and_covid_deaths  "4" ;
+        ds:pneumonia_deaths            "434" ;
+        ds:total_deaths                "9979" ;
+        socrata:rowID                  "row-38en-ae5a~x7vh" .
+
+<https://data.cdc.gov/resource/hc4f-j6nb/row-sn8t_yjza~heyu>
+        a                              dsbase:hc4f-j6nb ;
+        rdfs:member                    <https://data.cdc.gov/resource/hc4f-j6nb> ;
+        ds:covid_deaths                "23" ;
+        ds:group                       "By state" ;
+        ds:indicator                   "Virginia" ;
+        ds:percent_expected_deaths     "0.92" ;
+        ds:pneumonia_and_covid_deaths  "6" ;
+        ds:pneumonia_deaths            "518" ;
+        ds:total_deaths                "12853" ;
+        socrata:rowID                  "row-sn8t_yjza~heyu" .
+
+<https://data.cdc.gov/resource/hc4f-j6nb/row-yna3.3p7m_dbrg>
+        a                              dsbase:hc4f-j6nb ;
+        rdfs:member                    <https://data.cdc.gov/resource/hc4f-j6nb> ;
+        ds:covid_deaths                "5" ;
+        ds:group                       "By state" ;
+        ds:indicator                   "Indiana" ;
+        ds:percent_expected_deaths     "0.83" ;
+        ds:pneumonia_and_covid_deaths  "2" ;
+        ds:pneumonia_deaths            "640" ;
+        ds:total_deaths                "11153" ;
+        socrata:rowID                  "row-yna3.3p7m_dbrg" .
+
+<https://data.cdc.gov/resource/hc4f-j6nb/row-v5na~xu29_su6i>
+        a                              dsbase:hc4f-j6nb ;
+        rdfs:member                    <https://data.cdc.gov/resource/hc4f-j6nb> ;
+        ds:covid_deaths                "43" ;
+        ds:group                       "By week" ;
+        ds:indicator                   "3/14/2020" ;
+        ds:percent_expected_deaths     "0.89" ;
+        ds:pneumonia_and_covid_deaths  "18" ;
+        ds:pneumonia_deaths            "2869" ;
+        ds:total_deaths                "50580" ;
+        socrata:rowID                  "row-v5na~xu29_su6i" .
+
+<https://data.cdc.gov/resource/hc4f-j6nb/row-3s54_duq7~kt84>
+        a                              dsbase:hc4f-j6nb ;
+        rdfs:member                    <https://data.cdc.gov/resource/hc4f-j6nb> ;
+        ds:covid_deaths                "79" ;
+        ds:group                       "By age" ;
+        ds:indicator                   "35-44 years" ;
+        ds:percent_expected_deaths     "0.85" ;
+        ds:pneumonia_and_covid_deaths  "23" ;
+        ds:pneumonia_deaths            "455" ;
+        ds:total_deaths                "13241" ;
+        socrata:rowID                  "row-3s54_duq7~kt84" .
+
+<https://data.cdc.gov/resource/hc4f-j6nb/row-pahk-kwv8-ktvs>
+        a                              dsbase:hc4f-j6nb ;
+        rdfs:member                    <https://data.cdc.gov/resource/hc4f-j6nb> ;
+        ds:covid_deaths                "0" ;
+        ds:group                       "By state" ;
+        ds:indicator                   "Ohio" ;
+        ds:percent_expected_deaths     "0.73" ;
+        ds:pneumonia_and_covid_deaths  "0" ;
+        ds:pneumonia_deaths            "770" ;
+        ds:total_deaths                "18245" ;
+        socrata:rowID                  "row-pahk-kwv8-ktvs" .
+
+<https://data.cdc.gov/resource/hc4f-j6nb/row-wh3n-ynnj_e5fu>
+        a                              dsbase:hc4f-j6nb ;
+        rdfs:member                    <https://data.cdc.gov/resource/hc4f-j6nb> ;
+        ds:covid_deaths                "0" ;
+        ds:group                       "By state" ;
+        ds:indicator                   "West Virginia" ;
+        ds:percent_expected_deaths     "0.62" ;
+        ds:pneumonia_and_covid_deaths  "0" ;
+        ds:pneumonia_deaths            "153" ;
+        ds:total_deaths                "2855" ;
+        socrata:rowID                  "row-wh3n-ynnj_e5fu" .
+
+<https://data.cdc.gov/resource/hc4f-j6nb/row-ktmc_vn9k~ay7y>
+        a                              dsbase:hc4f-j6nb ;
+        rdfs:member                    <https://data.cdc.gov/resource/hc4f-j6nb> ;
+        ds:covid_deaths                "3" ;
+        ds:group                       "By state" ;
+        ds:indicator                   "Arkansas" ;
+        ds:percent_expected_deaths     "0.92" ;
+        ds:pneumonia_and_covid_deaths  "2" ;
+        ds:pneumonia_deaths            "306" ;
+        ds:total_deaths                "5939" ;
+        socrata:rowID                  "row-ktmc_vn9k~ay7y" .
+
+<https://data.cdc.gov/resource/hc4f-j6nb/row-zenb.kj76.esf9>
+        a                              dsbase:hc4f-j6nb ;
+        rdfs:member                    <https://data.cdc.gov/resource/hc4f-j6nb> ;
+        ds:covid_deaths                "6" ;
+        ds:group                       "By state" ;
+        ds:indicator                   "Maine" ;
+        ds:percent_expected_deaths     "0.96" ;
+        ds:pneumonia_and_covid_deaths  "4" ;
+        ds:pneumonia_deaths            "201" ;
+        ds:total_deaths                "2839" ;
+        socrata:rowID                  "row-zenb.kj76.esf9" .
+
+<https://data.cdc.gov/resource/hc4f-j6nb/row-hd35~eegp-p46b>
+        a                              dsbase:hc4f-j6nb ;
+        rdfs:member                    <https://data.cdc.gov/resource/hc4f-j6nb> ;
+        ds:covid_deaths                "0" ;
+        ds:group                       "By state" ;
+        ds:indicator                   "Wyoming" ;
+        ds:percent_expected_deaths     "0.89" ;
+        ds:pneumonia_and_covid_deaths  "0" ;
+        ds:pneumonia_deaths            "45" ;
+        ds:total_deaths                "803" ;
+        socrata:rowID                  "row-hd35~eegp-p46b" .
+
+<https://data.cdc.gov/resource/hc4f-j6nb/row-ffjf.9cnk_zat2>
+        a                              dsbase:hc4f-j6nb ;
+        rdfs:member                    <https://data.cdc.gov/resource/hc4f-j6nb> ;
+        ds:covid_deaths                "3307" ;
+        ds:group                       "By age" ;
+        ds:indicator                   "All ages" ;
+        ds:percent_expected_deaths     "0.85" ;
+        ds:pneumonia_and_covid_deaths  "1410" ;
+        ds:pneumonia_deaths            "28475" ;
+        ds:total_deaths                "490389" ;
+        socrata:rowID                  "row-ffjf.9cnk_zat2" .
+
+<https://data.cdc.gov/resource/hc4f-j6nb/row-setn-sn3t_8asm>
+        a                              dsbase:hc4f-j6nb ;
+        rdfs:member                    <https://data.cdc.gov/resource/hc4f-j6nb> ;
+        ds:covid_deaths                "385" ;
+        ds:group                       "By week" ;
+        ds:indicator                   "3/21/2020" ;
+        ds:percent_expected_deaths     "0.84" ;
+        ds:pneumonia_and_covid_deaths  "156" ;
+        ds:pneumonia_deaths            "3024" ;
+        ds:total_deaths                "47649" ;
+        socrata:rowID                  "row-setn-sn3t_8asm" .
+
+<https://data.cdc.gov/resource/hc4f-j6nb/row-z4cr-axs6~ify2>
+        a                              dsbase:hc4f-j6nb ;
+        rdfs:member                    <https://data.cdc.gov/resource/hc4f-j6nb> ;
+        ds:covid_deaths                "10" ;
+        ds:group                       "By state" ;
+        ds:indicator                   "Nevada" ;
+        ds:percent_expected_deaths     "0.92" ;
+        ds:pneumonia_and_covid_deaths  "9" ;
+        ds:pneumonia_deaths            "242" ;
+        ds:total_deaths                "4756" ;
+        socrata:rowID                  "row-z4cr-axs6~ify2" .
+
+<https://data.cdc.gov/resource/hc4f-j6nb/row-73qa-hywb.ndc2>
+        a                              dsbase:hc4f-j6nb ;
+        rdfs:member                    <https://data.cdc.gov/resource/hc4f-j6nb> ;
+        ds:covid_deaths                "0" ;
+        ds:group                       "By state" ;
+        ds:indicator                   "New Mexico" ;
+        ds:percent_expected_deaths     "0.79" ;
+        ds:pneumonia_and_covid_deaths  "0" ;
+        ds:pneumonia_deaths            "171" ;
+        ds:total_deaths                "3015" ;
+        socrata:rowID                  "row-73qa-hywb.ndc2" .
+
+<https://data.cdc.gov/resource/hc4f-j6nb/row-hx8e~8d3z.c7qm>
+        a                              dsbase:hc4f-j6nb ;
+        rdfs:member                    <https://data.cdc.gov/resource/hc4f-j6nb> ;
+        ds:covid_deaths                "1" ;
+        ds:group                       "By age" ;
+        ds:indicator                   "1-4 years" ;
+        ds:percent_expected_deaths     "0.73" ;
+        ds:pneumonia_and_covid_deaths  "1" ;
+        ds:pneumonia_deaths            "24" ;
+        ds:total_deaths                "529" ;
+        socrata:rowID                  "row-hx8e~8d3z.c7qm" .
+
+<https://data.cdc.gov/resource/hc4f-j6nb/row-m5kk~d5aa.42x9>
+        a                              dsbase:hc4f-j6nb ;
+        rdfs:member                    <https://data.cdc.gov/resource/hc4f-j6nb> ;
+        ds:covid_deaths                "26" ;
+        ds:group                       "By state" ;
+        ds:indicator                   "Arizona" ;
+        ds:percent_expected_deaths     "0.97" ;
+        ds:pneumonia_and_covid_deaths  "10" ;
+        ds:pneumonia_deaths            "622" ;
+        ds:total_deaths                "11862" ;
+        socrata:rowID                  "row-m5kk~d5aa.42x9" .
+
+<https://data.cdc.gov/resource/hc4f-j6nb/row-bddg_23zp~d8n3>
+        a                              dsbase:hc4f-j6nb ;
+        rdfs:member                    <https://data.cdc.gov/resource/hc4f-j6nb> ;
+        ds:covid_deaths                "15" ;
+        ds:group                       "By state" ;
+        ds:indicator                   "Texas" ;
+        ds:percent_expected_deaths     "0.88" ;
+        ds:pneumonia_and_covid_deaths  "3" ;
+        ds:pneumonia_deaths            "2064" ;
+        ds:total_deaths                "35928" ;
+        socrata:rowID                  "row-bddg_23zp~d8n3" .
+
+<https://data.cdc.gov/resource/hc4f-j6nb/row-d239~9ezc~46s2>
+        a                              dsbase:hc4f-j6nb ;
+        rdfs:member                    <https://data.cdc.gov/resource/hc4f-j6nb> ;
+        ds:covid_deaths                "914" ;
+        ds:group                       "By age" ;
+        ds:indicator                   "75-84 years" ;
+        ds:percent_expected_deaths     "0.88" ;
+        ds:pneumonia_and_covid_deaths  "421" ;
+        ds:pneumonia_deaths            "7613" ;
+        ds:total_deaths                "121482" ;
+        socrata:rowID                  "row-d239~9ezc~46s2" .
+
+<https://data.cdc.gov/resource/hc4f-j6nb/row-ctfu-hga3_j7rj>
+        a                              dsbase:hc4f-j6nb ;
+        rdfs:member                    <https://data.cdc.gov/resource/hc4f-j6nb> ;
+        ds:covid_deaths                "0" ;
+        ds:group                       "By state" ;
+        ds:indicator                   "Delaware" ;
+        ds:percent_expected_deaths     "0.69" ;
+        ds:pneumonia_and_covid_deaths  "0" ;
+        ds:pneumonia_deaths            "56" ;
+        ds:total_deaths                "1295" ;
+        socrata:rowID                  "row-ctfu-hga3_j7rj" .
+
+<https://data.cdc.gov/resource/hc4f-j6nb/row-yfsx.m6zu_f85j>
+        a                              dsbase:hc4f-j6nb ;
+        rdfs:member                    <https://data.cdc.gov/resource/hc4f-j6nb> ;
+        ds:covid_deaths                "201" ;
+        ds:group                       "By age" ;
+        ds:indicator                   "45-54 years" ;
+        ds:percent_expected_deaths     "0.77" ;
+        ds:pneumonia_and_covid_deaths  "80" ;
+        ds:pneumonia_deaths            "1154" ;
+        ds:total_deaths                "25526" ;
+        socrata:rowID                  "row-yfsx.m6zu_f85j" .
+
+<https://data.cdc.gov/resource/hc4f-j6nb/row-jhgu~pbu5~qqak>
+        a                              dsbase:hc4f-j6nb ;
+        rdfs:member                    <https://data.cdc.gov/resource/hc4f-j6nb> ;
+        ds:covid_deaths                "35" ;
+        ds:group                       "By state" ;
+        ds:indicator                   "Georgia" ;
+        ds:percent_expected_deaths     "0.82" ;
+        ds:pneumonia_and_covid_deaths  "20" ;
+        ds:pneumonia_deaths            "636" ;
+        ds:total_deaths                "13781" ;
+        socrata:rowID                  "row-jhgu~pbu5~qqak" .
+
+<https://data.cdc.gov/resource/hc4f-j6nb/row-hzcb.46xg_6wyp>
+        a                              dsbase:hc4f-j6nb ;
+        rdfs:member                    <https://data.cdc.gov/resource/hc4f-j6nb> ;
+        ds:covid_deaths                "1" ;
+        ds:group                       "By state" ;
+        ds:indicator                   "Vermont" ;
+        ds:percent_expected_deaths     "0.92" ;
+        ds:pneumonia_and_covid_deaths  "1" ;
+        ds:pneumonia_deaths            "49" ;
+        ds:total_deaths                "1072" ;
+        socrata:rowID                  "row-hzcb.46xg_6wyp" .
+
+<https://data.cdc.gov/resource/hc4f-j6nb/row-xt75.4xur_5tqw>
+        a                              dsbase:hc4f-j6nb ;
+        rdfs:member                    <https://data.cdc.gov/resource/hc4f-j6nb> ;
+        ds:covid_deaths                "5" ;
+        ds:group                       "By week" ;
+        ds:indicator                   "2/29/2020" ;
+        ds:percent_expected_deaths     "0.95" ;
+        ds:pneumonia_and_covid_deaths  "2" ;
+        ds:pneumonia_deaths            "2863" ;
+        ds:total_deaths                "54305" ;
+        socrata:rowID                  "row-xt75.4xur_5tqw" .
+
+<https://data.cdc.gov/resource/hc4f-j6nb/row-qnpa-kmk9~7n4w>
+        a                              dsbase:hc4f-j6nb ;
+        rdfs:member                    <https://data.cdc.gov/resource/hc4f-j6nb> ;
+        ds:covid_deaths                "916" ;
+        ds:group                       "By age" ;
+        ds:indicator                   "85 years and over" ;
+        ds:percent_expected_deaths     "0.84" ;
+        ds:pneumonia_and_covid_deaths  "437" ;
+        ds:pneumonia_deaths            "10096" ;
+        ds:total_deaths                "154497" ;
+        socrata:rowID                  "row-qnpa-kmk9~7n4w" .
+
+<https://data.cdc.gov/resource/hc4f-j6nb/row-hr6j~8y7x_yb5t>
+        a                              dsbase:hc4f-j6nb ;
+        rdfs:member                    <https://data.cdc.gov/resource/hc4f-j6nb> ;
+        ds:covid_deaths                "18" ;
+        ds:group                       "By week" ;
+        ds:indicator                   "3/7/2020" ;
+        ds:percent_expected_deaths     "0.92" ;
+        ds:pneumonia_and_covid_deaths  "7" ;
+        ds:pneumonia_deaths            "2884" ;
+        ds:total_deaths                "53418" ;
+        socrata:rowID                  "row-hr6j~8y7x_yb5t" .
+
+<https://data.cdc.gov/resource/hc4f-j6nb/row-g865~pv6e-2ku2>
+        a                              dsbase:hc4f-j6nb ;
+        rdfs:member                    <https://data.cdc.gov/resource/hc4f-j6nb> ;
+        ds:covid_deaths                "0" ;
+        ds:group                       "By state" ;
+        ds:indicator                   "Hawaii" ;
+        ds:percent_expected_deaths     "0.92" ;
+        ds:pneumonia_and_covid_deaths  "0" ;
+        ds:pneumonia_deaths            "128" ;
+        ds:total_deaths                "2168" ;
+        socrata:rowID                  "row-g865~pv6e-2ku2" .
+
+<https://data.cdc.gov/resource/hc4f-j6nb/row-y2jm~374p.v7h4>
+        a                              dsbase:hc4f-j6nb ;
+        rdfs:member                    <https://data.cdc.gov/resource/hc4f-j6nb> ;
+        ds:covid_deaths                "1712" ;
+        ds:group                       "By state" ;
+        ds:indicator                   "New York City" ;
+        ds:percent_expected_deaths     "1.28" ;
+        ds:pneumonia_and_covid_deaths  "641" ;
+        ds:pneumonia_deaths            "1670" ;
+        ds:total_deaths                "14001" ;
+        socrata:rowID                  "row-y2jm~374p.v7h4" .
+
+<https://data.cdc.gov/resource/hc4f-j6nb/row-jxev-6uvz_3hv3>
+        a                              dsbase:hc4f-j6nb ;
+        rdfs:member                    <https://data.cdc.gov/resource/hc4f-j6nb> ;
+        ds:covid_deaths                "1" ;
+        ds:group                       "By state" ;
+        ds:indicator                   "Alaska" ;
+        ds:percent_expected_deaths     "0.73" ;
+        ds:pneumonia_and_covid_deaths  "1" ;
+        ds:pneumonia_deaths            "27" ;
+        ds:total_deaths                "613" ;
+        socrata:rowID                  "row-jxev-6uvz_3hv3" .
